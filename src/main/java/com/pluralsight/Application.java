@@ -4,6 +4,6 @@ public class Application {
     public static void main(String[] args) {
 
         // starting the application
-        //creating the user interface
+        // creating the user interface
     }
 }
