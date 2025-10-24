@@ -1,19 +1,27 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dealership {
-    String name;
-    String address;
-    String phoneNumber;
+    //  hold information about the dealership
+    //  maintain a list of vehicles
+    //  methods that search the list for matching vehicles
+    //  add/remove vehicles
 
-    //inventory: arrayList<Vehicle>
+    //Dealership info
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private List<Vehicle> inventory; // creates a new list called inventory to store vehicles
 
     //constructor
-    public Dealership(String name, String address, String phoneNumber) {
+    public Dealership(String name, String address, String phoneNumber, List<Vehicle> inventory) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        //when a dealership (garage) is created, it also creates an empty list (parking lot) to hold vehicle objects
+        this.inventory = new ArrayList<>(); //instantiated object in constructor
     }
 
     //getters
@@ -43,16 +51,41 @@ public class Dealership {
         this.phoneNumber = phoneNumber;
     }
 
-    // derived getters
-    getVehiclesByPrice(min,max): List<Vehicle>;
-    getvehiclesByMakeModel(make,model: List<Vehicle>);
-    getvehiclesByYear(min,max): List<Vehicle>;
-    getvehiclesByColor(color): List<Vehicle>;
-    getvehiclesByMilage(min, max): List<Vehicle>;
-    getvehiclesByType(vehicleType): List<Vehicle>;
-    getAllVehicles(): List<Vehicle>;
+    // methods
+    public List<Vehicle> getVehiclesByPrice( double min,double max){
+        return new ArrayList<>();
+    }
 
-    //other methods
-    addVehicle(vehicle);
+    public List<Vehicle> getvehiclesByMakeModel(String make, String model){
+        return new ArrayList<>();
+    }
 
-    removeVehicle(vehicle);
+    public List<Vehicle> getvehiclesByYear(int min,int max){
+        return new ArrayList<>();
+    }
+
+    public List<Vehicle> getvehiclesByColor(String color){
+        return new ArrayList<>();
+    }
+
+    public List<Vehicle> getvehiclesByMilage(int min,int max){
+        return new ArrayList<>();
+    }
+
+    public List<Vehicle> getvehiclesByType(String vehicleType){
+        return new ArrayList<>();
+    }
+
+    public List<Vehicle> getAllVehicles(){
+        return new ArrayList<>();
+    }
+
+    public void addVehicle(vehicle) {
+        inventory.add(vehicle);
+    }
+
+
+    public void removeVehicle(vehicle) {
+        inventory.remove(vehicle);
+    }
+}

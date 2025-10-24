@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 public class Vehicle {
+    //hold information about a specific vehicle
 
     int vin;
     int year;
