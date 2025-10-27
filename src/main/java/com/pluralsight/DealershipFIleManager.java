@@ -10,7 +10,7 @@ public class DealershipFIleManager {
     //parsing the data
 
     // This method loads and reads the inventory.csv file
-    public  Dealership getDealership() throws IOException {
+    public Dealership getDealership() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"));
         String line;
         while ((line = reader.readLine()) != null) {

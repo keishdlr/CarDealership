@@ -52,31 +52,31 @@ public class Dealership {
     }
 
     // methods
-    public List<Vehicle> getVehiclesByPrice( double min,double max){
+    public static List<Vehicle> getVehiclesByPrice( double min,double max){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getvehiclesByMakeModel(String make, String model){
+    public static List<Vehicle> getvehiclesByMakeModel(String make, String model){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getvehiclesByYear(int min,int max){
+    public static List<Vehicle> getvehiclesByYear(int min,int max){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getvehiclesByColor(String color){
+    public static List<Vehicle> getvehiclesByColor(String color){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getvehiclesByMilage(int min,int max){
+    public static List<Vehicle> getvehiclesByMilage(int min,int max){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getvehiclesByType(String vehicleType){
+    public static List<Vehicle> getvehiclesByType(String vehicleType){
         return new ArrayList<>();
     }
 
-    public List<Vehicle> getAllVehicles(){
+    public static List<Vehicle> getAllVehicles(){
         return new ArrayList<>();
     }
 
