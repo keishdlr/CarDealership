@@ -80,12 +80,11 @@ public class Dealership {
         return new ArrayList<>();
     }
 
-    public void addVehicle(vehicle) {
+    public void addVehicle(Vehicle vehicle) {
         inventory.add(vehicle);
     }
 
-
-    public void removeVehicle(vehicle) {
+    public void removeVehicle(Vehicle vehicle) {
         inventory.remove(vehicle);
     }
 }
