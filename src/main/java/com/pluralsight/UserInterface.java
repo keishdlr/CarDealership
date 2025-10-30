@@ -15,6 +15,18 @@ public class UserInterface {
     public UserInterface() {
     }
 
+    // helper method to be used above
+    private static void  displayVehicles(List<Vehicle> list) {
+        if (list == null || list.isEmpty()) {
+            System.out.println("No list found");
+            return;
+        }
+        System.out.println("~~~~~~ Vehicle List ~~~~~~");
+        for (Vehicle v : list) {
+            System.out.println(v); //output will be in the format seen in the vehicle class
+        }
+    }
+
     //Methods
     private void init(){
         //create dealership object
@@ -166,19 +178,6 @@ public class UserInterface {
         }
         }
 
-    }
-    // helper method to be used above
-    private static void  displayVehicles(List<Vehicle> vehicles) {
-        if (vehicles == null || vehicles.isEmpty()) {
-            System.out.println("No vehicles found");
-            return;
-        }
-        System.out.println("~~~~~~ Vehicle List ~~~~~~");
-        for (Vehicle v : vehicles) {
-            System.out.println(v); //output will be in the format seen in the vehicle class
-        }
-    }
-
     //processes methods
     public void processGetByPriceRequest(){
         return ;
@@ -187,32 +186,41 @@ public class UserInterface {
     public void processGetByMakeModelRequest(){
     return;
     }
+
     public void processGetByYearRequest(){
 
     return;
     }
+
     public void processGetByColorRequest(){
 
     return;
     }
+
     public void processGetByMileage(){
 
     return;
     }
+
     public void processGetByVehicleType(){
 
     return;
     }
-    public void processGetAllVehicleRequest(){
 
-    return;
+    public void processGetAllVehicleRequest(){
+        dealership.getAllVehicles();
+            return displayVehicles(List <Vehicle> List);
     }
+
     public void processAddVehicleRequest(){
         //call the dealership getAllvehicles method
         //call the displayVeicles(list returned from getallvehicles) helper method
+
     return;
     }
+
     public void processRemoveVehicleRequest(){
 
     return;
     }
+}
