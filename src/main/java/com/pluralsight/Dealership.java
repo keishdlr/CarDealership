@@ -21,7 +21,7 @@ public class Dealership {
         this.address = address;
         this.phoneNumber = phoneNumber;
         //when a dealership (garage) is created, it also creates an empty list (parking lot) to hold vehicle objects
-        this.inventory = new ArrayList<>(); //instantiated object in constructor
+        this.inventory = inventory != null ? inventory : new ArrayList<>(); //instantiated object in constructor
     }
 
     //getters
@@ -52,32 +52,38 @@ public class Dealership {
     }
 
     // methods
-    public static List<Vehicle> getVehiclesByPrice( double min,double max){
+    public List<Vehicle> getVehiclesByPrice(double min, double max) {
+        List<Vehicle> results = new ArrayList<>();
+        for (Vehicle v : inventory) {
+            if (v.getPrice() >= min && v.getPrice() <= max) {
+                results.add(v);
+            }
+        }
+        return results;
+    }
+
+    public List<Vehicle> getvehiclesByMakeModel(String make, String model){
         return new ArrayList<>();
     }
 
-    public static List<Vehicle> getvehiclesByMakeModel(String make, String model){
+    public List<Vehicle> getvehiclesByYear(int year){
         return new ArrayList<>();
     }
 
-    public static List<Vehicle> getvehiclesByYear(int min,int max){
+    public List<Vehicle> getvehiclesByColor(String color){
         return new ArrayList<>();
     }
 
-    public static List<Vehicle> getvehiclesByColor(String color){
+    public List<Vehicle> getvehiclesByMilage(int mileage){
         return new ArrayList<>();
     }
 
-    public static List<Vehicle> getvehiclesByMilage(int min,int max){
+    public List<Vehicle> getvehiclesByType(String vehicleType){
         return new ArrayList<>();
     }
 
-    public static List<Vehicle> getvehiclesByType(String vehicleType){
-        return new ArrayList<>();
-    }
-
-    public static List<Vehicle> getAllVehicles(){
-        return new ArrayList<>();
+    public List<Vehicle> getAllVehicles(){
+        return inventory;
     }
 
     public void addVehicle(Vehicle vehicle) {
