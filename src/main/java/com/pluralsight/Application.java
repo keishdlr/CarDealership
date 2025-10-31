@@ -5,5 +5,6 @@ public class Application {
 
         // starting the application
         // creating the user interface
+        UserInterface.displayVehicles;
     }
 }

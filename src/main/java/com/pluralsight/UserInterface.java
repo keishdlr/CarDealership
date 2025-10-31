@@ -31,8 +31,8 @@ public class UserInterface {
     private void init(){
         //create dealership object
         //assign the dealership that it returns to the userinterface this.dealership attribute
-        DealershipFIleManager Dealership = new DealershipFIleManager();  //create instance of dealershiofilemanager
-        DealershipFIleManager.getdealership();  //call its get dealership method
+        DealershipFileManager Dealership = new DealershipFileManager();  //create instance of dealershiofilemanager
+        DealershipFileManager.getdealership();  //call its get dealership method
         this.dealership = Dealership.getDealership(); //assigns the dealership that returns to the  this.dealership attribute
 
     }
@@ -147,7 +147,7 @@ public class UserInterface {
                     Vehicle newVehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
                     dealership.addVehicle(newVehicle());
 
-                    DealershipFIleManager.saveDealership(dealership); //method to save vehicle to CSV file
+                    DealershipFileManager.saveDealership(dealership); //method to save vehicle to CSV file
 
                     System.out.println("✅🚘Vehicle added successfully!");
                     break;
