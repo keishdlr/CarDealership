@@ -2,9 +2,7 @@ package com.pluralsight;
 
 public class Application {
     public static void main(String[] args) {
-
-        // starting the application
-        // creating the user interface
-        UserInterface.displayVehicles;
+        UserInterface ui = new UserInterface();
+        ui.display();
     }
 }
