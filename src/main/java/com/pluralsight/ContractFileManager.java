@@ -33,16 +33,14 @@ public class ContractFileManager {
                     double recordingFee = Double.parseDouble(values[13].trim());
                     double processingFee = Double.parseDouble(values[14].trim());
                     boolean financeOption = Boolean.parseBoolean(values[15].trim());
-                    double monthlyPayments = Double.parseDouble(values[16].trim());
-
                     contract = new SalesContract();
+
                 } else if (contractType.equalsIgnoreCase("LEASE")) {
                     double expectedEndingValue = Double.parseDouble(values[12].trim());
                     double leaseFee = Double.parseDouble(values[13].trim());
-                    int leaseTermMonths = Integer.parseInt(values[14].trim());
-
-                    contract = new LeaseContract(date, customerName, customerEmail, vehicle,
-                            expectedEndingValue, leaseFee, leaseTermMonths);
+                    double totalPrice = Double.parseDouble(values[14].trim());
+                    double monthlyPayments = Double.parseDouble(values[15].trim());
+                    contract = new LeaseContract(customerName, customerEmail,expectedEndingValue, leaseFee, totalPrice,monthlyPayments);
                 } else {
                     continue; // Unknown contract type
                 }
