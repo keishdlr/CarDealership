@@ -38,8 +38,4 @@ public class DealershipFileManager {
     public void saveDealership(Dealership dealership) {
         // TODO: implement writing dealership and vehicles to inventory.csv
     }
-
-
-
-
 }

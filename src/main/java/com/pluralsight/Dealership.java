@@ -16,7 +16,7 @@ public class Dealership {
     private List<Vehicle> inventory; // creates a new list called inventory to store vehicles
 
     //constructor
-    public Dealership(String name, String address, String phoneNumber, List<Vehicle> inventory) {
+    public Dealership(String name, String address, String phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
